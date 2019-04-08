@@ -1,0 +1,39 @@
+- set_meta_tags  title: '助成金・補助金をどこよりも詳しく知るなら｜SMART Documentカテゴリー一覧'
+- set_meta_tags  keyword: '助成金 一覧,補助金 一覧'
+- set_meta_tags  description: '助成金・補助金をどこよりも詳しく知るならSMART Document'
+
+.tops-wrapper
+  .row
+    .col-sm-8
+      h1.headline
+        | 新着記事
+      - @posts.each do |post|
+        .row.post-container
+          .col-sm-5
+            = image_tag post.file.to_s, width:"100%", class:"post-space"
+          .col-sm-7.post-base
+            .post-title
+              = link_to post.title, post_path(post)
+            .post-description
+              = post.description.html_safe
+               - if admin_signed_in?
+                = link_to '編集', edit_post_path(post), class: 'command'
+                = link_to '削除',
+                 			            	post_path(post),
+                 			            	method: :delete,
+                 			            	class: 'command',
+                 			            	data: { confirm: '本当に削除しますか？'}
+          br
+      = paginate @posts
+    .col-sm-4
+      .row
+        .col-sm-12
+          h2.headline
+            | カテゴリー一覧
+          = link_to '弁護士専門情報', posts_path(type: "laywer", post: '[desc]'), class:"square_btn"
+          = link_to '社労士専門情報', posts_path(type: "employee", post: '[desc]'), class:"square_btn"
+          = link_to '税理士専門情報', posts_path(type: "tax", post: '[desc]'), class:"square_btn"
+          = link_to '中小企業診断士専門情報', posts_path(type: "diagnostician", post: '[desc]'), class:"square_btn"
+          = link_to '司法書士専門情報', posts_path(type: "judicia", post: '[desc]'), class:"square_btn"
+          = link_to '公認会計士専門情報', posts_path(type: "administrative", post: '[desc]'), class:"square_btn"
+          = link_to 'ファイナンシャルプランナー専門情報', posts_path(type: "fp", post: '[desc]'), class:"square_btn"

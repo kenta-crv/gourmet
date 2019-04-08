@@ -1,0 +1,11 @@
+- set_meta_tags  title: '助成金・補助金をどこよりも詳しく知るなら｜SMART Documentカテゴリー一覧'
+- set_meta_tags  keyword: '助成金 詳細,補助金 詳細'
+- set_meta_tags  description: '助成金・補助金の記事をどこよりも詳しく知るならSMART Document'
+
+#post-detail.tops-wrapper
+  .fr-view
+	  h1.headline-first  = @post.title
+       - if @post.file?
+      .image_post  = image_tag @post.file.url
+	  p  = @post.body.html_safe
+
