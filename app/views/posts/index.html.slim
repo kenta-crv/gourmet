@@ -8,7 +8,7 @@
       h1.headline
         | 新着記事
       - @posts.each do |post|
-        .row.post-container
+        .row
           .col-sm-5
             = image_tag post.file.to_s, width:"100%", class:"post-space"
           .col-sm-7.post-base
@@ -23,17 +23,23 @@
                  			            	method: :delete,
                  			            	class: 'command',
                  			            	data: { confirm: '本当に削除しますか？'}
-          br
+        br
+        hr
       = paginate @posts
     .col-sm-4
       .row
         .col-sm-12
           h2.headline
             | カテゴリー一覧
-          = link_to '弁護士専門情報', posts_path(type: "laywer", post: '[desc]'), class:"square_btn"
-          = link_to '社労士専門情報', posts_path(type: "employee", post: '[desc]'), class:"square_btn"
-          = link_to '税理士専門情報', posts_path(type: "tax", post: '[desc]'), class:"square_btn"
-          = link_to '中小企業診断士専門情報', posts_path(type: "diagnostician", post: '[desc]'), class:"square_btn"
-          = link_to '司法書士専門情報', posts_path(type: "judicia", post: '[desc]'), class:"square_btn"
-          = link_to '公認会計士専門情報', posts_path(type: "administrative", post: '[desc]'), class:"square_btn"
-          = link_to 'ファイナンシャルプランナー専門情報', posts_path(type: "fp", post: '[desc]'), class:"square_btn"
+          = link_to '和食・日本料理', posts_path(type: "japanese", post: '[desc]'), class:"square_btn"
+          = link_to '寿司・丼', posts_path(type: "sushi", post: '[desc]'), class:"square_btn"
+          = link_to 'イタリアン', posts_path(type: "italian", post: '[desc]'), class:"square_btn"
+          = link_to 'フレンチ', posts_path(type: "french", post: '[desc]'), class:"square_btn"
+          = link_to 'とんかつ', posts_path(type: "tonkatsu", post: '[desc]'), class:"square_btn"
+          = link_to 'カレー', posts_path(type: "administrative", post: '[desc]'), class:"square_btn"
+          = link_to 'アジア・エスニック', posts_path(type: "asia", post: '[desc]'), class:"square_btn"
+          = link_to '焼肉・ステーキ', posts_path(type: "yakiniku", post: '[desc]'), class:"square_btn"
+          = link_to '焼鳥・串料理', posts_path(type: "yakitori", post: '[desc]'), class:"square_btn"
+          = link_to '居酒屋・バー', posts_path(type: "bar", post: '[desc]'), class:"square_btn"
+          = link_to 'カフェ・スイーツ', posts_path(type: "cafe", post: '[desc]'), class:"square_btn"
+          = link_to 'その他', posts_path(type: "other", post: '[desc]'), class:"square_btn"

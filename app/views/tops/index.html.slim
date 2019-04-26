@@ -1,33 +1,75 @@
+- set_meta_tags  title: '東京美食naviではグルメライターとして活動する奥山健太が訪問して、満足度が高い店舗のみを掲載しております。' 
+- set_meta_tags  keyword: 'グルメ 東京,おすすめ グルメ' 
+- set_meta_tags  description: '東京でオススメのお店をご紹介なら東京美食navi' 
+
 .row
-  .col-sm-12
+  .col-sm-12.hidden-xs
     = image_tag 'main.jpg' , width:'100%'
 br
-.row.center
-  .col-sm-4
-    - link_to "#yakiniku" do 
-	h4 焼肉
-	= image_tag 'yakiniku.jpg' , width:'80%'
-
-  .col-sm-4
-	h4 イタリアン
-	= image_tag 'italian.jpg' , width:'80%'
-
-  .col-sm-4
-	h4 フレンチ
-	= image_tag 'french.jpg' , width:'80%'
 br
 .row.center
-  .col-sm-4
-	h4 とんかつ
-    = image_tag 'tonkatsu.jpg' , width:'80%'
-    
-  .col-sm-4
-	h4 鮨
-	= image_tag 'sushi.jpg' , width:'80%'
+  .col-sm-4.margin-height
+    = link_to "posts?post=%5Bdesc%5D&type=yakiniku" do 
+	  = image_tag 'yakiniku.jpg' , width:'80%'
+	  h4 焼肉
 
-  .col-sm-4
-	h4 カレー
-	= image_tag 'curry.jpg' , width:'80%'
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=italian' do
+	  = image_tag 'italian.jpg' , width:'80%'
+	  h4 イタリアン
+
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=french' do
+	  = image_tag 'french.jpg' , width:'80%'
+	  h4 フレンチ
+	  
+.row.center
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=tonkatsu' do
+      = image_tag 'tonkatsu.jpg' , width:'80%'
+      h4 とんかつ
+    
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=sushi' do
+	  = image_tag 'sushi.jpg' , width:'80%'
+	  h4 鮨
+
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=administrative' do
+	  = image_tag 'curry.jpg' , width:'80%'
+	  h4 カレー
+
+.row.center
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=yakitori' do
+      = image_tag 'yakitori.jpg' , width:'80%'
+      h4 焼き鳥
+    
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=japanese' do
+	  = image_tag 'japanese.jpg' , width:'80%'
+	  h4 和食・日本料理
+
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=asia' do
+	  = image_tag 'chinese.jpg' , width:'80%'
+	  h4 中華・アジア・エスニック
+
+.row.center
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=bar' do
+      = image_tag 'tavern.jpg' , width:'80%'
+      h4 居酒屋・バー
+    
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=cafe' do
+	  = image_tag 'sweets.jpg' , width:'80%'
+	  h4 カフェ・スイーツ
+
+  .col-sm-4.margin-height
+    = link_to '/posts?post=%5Bdesc%5D&type=other' do
+	  = image_tag 'other.jpg' , width:'80%'
+	  h4 その他
 
 
 

@@ -13,16 +13,15 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = display_meta_tags(default_meta_tags)
   h1
-    | GOURMET CLUB
+    | 東京美食navi
   br
   header
     .container-field
-      .row
-        .col-md
-          = link_to 'トップ', '/'
-          = link_to '評価一覧', '/'
-          = link_to 'レコメンド', '/' 
-          = link_to 'マスター', '/' 
+      .row.margin-bottom
+          = link_to 'トップ', '/', class:'col-sm-3'
+          = link_to '評価一覧', '/', class:'col-sm-3'
+          = link_to 'レコメンド', '/', class:'col-sm-3'
+          = link_to 'マスター', '/', class:'col-sm-3'
   body
      p.notice = notice
      p.alert = alert

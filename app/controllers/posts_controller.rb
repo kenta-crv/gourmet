@@ -6,11 +6,7 @@ class PostsController < ApplicationController
     when "japanese" then
       @posts = Post.where(choice: "和食・日本料理").page(params[:page]).per(20)
     when "sushi" then
-      @posts = Post.where(choice: "寿司・丼").page(params[:page]).per(20)
-    when "fish" then
-      @posts = Post.where(choice: "魚料理").page(params[:page]).per(20)      
-    when "local" then
-      @posts = Post.where(choice: "郷土料理").page(params[:page]).per(20)
+      @posts = Post.where(choice: "寿司・魚料理").page(params[:page]).per(20) 
     when "italian" then
       @posts = Post.where(choice: "イタリアン").page(params[:page]).per(20)
     when "french" then
@@ -18,17 +14,13 @@ class PostsController < ApplicationController
     when "tonkatsu" then
       @posts = Post.where(choice: "トンカツ").page(params[:page]).per(20)
     when "curry" then
-      @posts = Post.where(choice: "カレー").page(params[:page]).per(20)
-    when "chinese" then
-      @posts = Post.where(choice: "中華").page(params[:page]).per(20)      
+      @posts = Post.where(choice: "カレー").page(params[:page]).per(20) 
     when "asia" then
       @posts = Post.where(choice: "アジア・エスニック").page(params[:page]).per(20)
     when "yakiniku" then
       @posts = Post.where(choice: "焼肉・ステーキ").page(params[:page]).per(20)
     when "yakitori" then
       @posts = Post.where(choice: "焼鳥・串料理").page(params[:page]).per(20)
-    when "sukiyaki" then
-      @posts = Post.where(choice: "鍋・しゃぶしゃぶ・すき焼き").page(params[:page]).per(20)
     when "bar" then
       @posts = Post.where(choice: "居酒屋・バー").page(params[:page]).per(20)
     when "cafe" then
