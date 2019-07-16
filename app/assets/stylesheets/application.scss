@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
-  
+
 *= require froala_editor.min.css
 *= require froala_style.min.css
 *= require font-awesome
@@ -28,7 +28,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  */
-
 
 
 body {
@@ -58,7 +57,7 @@ a {
 h1 {
     text-align:center;
     font-weight:bold;
-    color:black; 
+    color:black;
 }
 
 /*ヘッダーのベース設定*/
@@ -76,7 +75,7 @@ header {
     }
 }
 
-/*ディテール*/ 
+/*ディテール*/
 .error {
     font-size:12px;
     font-weight: bold;
@@ -89,9 +88,9 @@ header {
   margin:0 auto;
   text-align:center;
 }
-               
-        
-        
+
+
+
 /*見出し*/
 	.headline {
 		padding: 0.6em 0.6em;/*文字の上下 左右の余白*/
@@ -105,12 +104,12 @@ header {
 		width:95%;
 		font-size:21px;
 		font-weight:bold;
-	    }	
+	    }
 	.center {
 	    text-align:center;
 	}
 
-  
+
   /*テーブル共通*/
 table.company {
 width: 90%;
@@ -170,7 +169,7 @@ padding-left: 20px;
 }
   input {
     width:90%;
-  } 
+  }
   textarea {
     width:90%;
     line-height: 1.5em;
@@ -188,13 +187,13 @@ padding-left: 20px;
 
 .margin-height {
   margin-bottom:30px;
-   
-   h4 { 
+
+   h4 {
       font-size:14px;
       }
    a, a:visited {
        color : gray;
        font-weight:bold;
       }
-   
+
 }
