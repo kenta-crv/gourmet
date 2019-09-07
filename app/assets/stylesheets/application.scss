@@ -28,13 +28,13 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  */
-
+$main_color: rgba(255,72,0,0.5);
+$sub_color: rgba(207,169,114,0.5);
+$asort_color: #d2d2d2;
 
 body {
-  margin: 0;
   font-family: "ヒラギノ角ゴ Pro W3";
   width:100%;
-  background-color:white;
 }
 
 /*フォントの指定はなし*/
@@ -48,8 +48,7 @@ a {
 
                                                    /*ヘッダーの始まり*/
 /*幅・位置の指定*/
-.container {
-  max-width: 1170px;
+.container-field {
   width: 100%;
   margin: 0 auto;
 }
@@ -65,13 +64,19 @@ header {
   width: 100%;
   font-size:15px;
   text-align:center;
+  height:45px;
+  margin-bottom: -62px;
+  background-color: $main_color;
   a {
     padding: 0 50px;
-    color: gray;
-    transition-duration:0.8s;
+    padding-top:10px;
+    height:45px;
+    color: white;
+    transition-duration:2.0s;
+    text-shadow: 1px 1px 1px #000;
     }
   a:hover {
-    background-color: rgba(146,146,146,0.1);
+    background-color: rgba(255,72,0,0.6);
     }
 }
 
@@ -182,7 +187,7 @@ padding-left: 20px;
 }
 
 .margin-bottom {
-  margin-bottom:-50px;
+  margin-bottom:-40px;
 }
 
 .margin-height {
@@ -196,4 +201,17 @@ padding-left: 20px;
        font-weight:bold;
       }
 
+}
+
+.center {
+  margin:0 auto;
+  text-align: center;
+}
+
+.side-bar {
+  background-color: rgba(207,169,114,0.5);
+  height:100vw;
+  font-weight:bold;
+  a, a:visited {color : #f3f3f3;}
+  text-shadow: 1px 1px 1px #000;
 }
