@@ -15,10 +15,24 @@ html
   .container-field
    header
     .row
-          = link_to 'トップページ', '/', class:'col-sm-3'
-          = link_to '人気ランキング', '#', class:'col-sm-3'
-          = link_to 'グルメマスターへの道', '#', class:'col-sm-3'
-          = link_to '管理者概要', '#', class:'col-sm-3'
+     .col-xs-3
+       = link_to "/" do
+       = image_tag 'rogo.png' , width:'330px'
+     .col-xs-6
+     .col-xs-3
+      nav.globalMenuSp
+       ul
+         li
+           = link_to "人気ランキング", "/"
+       ul
+         li
+           = link_to "お問い合わせフォーム", "contacts"
+
+   .navToggle
+          span
+          span
+          span
+          span menu
 
    body
      p.notice = notice

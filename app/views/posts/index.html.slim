@@ -2,56 +2,44 @@
 - set_meta_tags  keyword: '助成金 一覧,補助金 一覧'
 - set_meta_tags  description: '助成金・補助金をどこよりも詳しく知るならSMART Document'
 
-.row
- .col-xs-3.center.side-bar
-   br
-   =image_tag "logo.png", width:"70%"
-   hr
-   =link_to "焼肉/ステーキ -Yakiniku/Steak-", posts_path(type: "yakiniku", post: '[desc]')
-   hr
-   =link_to "フレンチ -French-", posts_path(type: "french", post: '[desc]')
-   hr
-   =link_to "イタリアン -Italian-", posts_path(type: "italian", post: '[desc]')
-   hr
-   =link_to "とんかつ -Tonkatsu-", posts_path(type: "tonkatsu", post: '[desc]')
-   hr
-   =link_to "カレー -Curry-", posts_path(type: "curry", post: '[desc]')
-   hr
-   =link_to "焼き鳥 -Yakitori-", posts_path(type: "yakitori", post: '[desc]')
-   hr
-   =link_to "和食 -JapaneseFood-", posts_path(type: "japanese", post: '[desc]')
-   hr
-   =link_to "寿司 -Sushi-", posts_path(type: "sushi", post: '[desc]')
-   hr
-   =link_to "アジア/エスニック -Asia/Ethnic-", posts_path(type: "asia", post: '[desc]')
-   hr
-   =link_to "その他 -Other-", posts_path(type: "other", post: '[desc]')
-   hr
-
- .col-xs-9.center.main-bar
-   br
-   =image_tag "main.jpg", width:"95%"
-   hr
-    .row
-    - @posts.each do |post|
-         .col-xs-4
-           = image_tag post.file.to_s, width:"100%", class:"post-space"
-           .post-title
-             = link_to post.title, post_path(post)
-           .post-description
-             = post.description.html_safe
-              - if admin_signed_in?
-               = link_to '編集', edit_post_path(post), class: 'command'
-               = link_to '削除',
-                                    post_path(post),
-                                    method: :delete,
-                                    class: 'command',
-                                    data: { confirm: '本当に削除しますか？'}
-   hr
-   = paginate @posts
-
-
-
-
-
 .tops-wrapper
+  .row
+    .col-sm-8
+      h1.headline
+        | 新着記事
+      - @posts.each do |post|
+        .row
+          .col-sm-5
+            = image_tag post.file.to_s, width:"100%", class:"post-space"
+          .col-sm-7.post-base
+            .post-title
+              = link_to post.title, post_path(post)
+            .post-description
+              = post.description.html_safe
+            - if admin_signed_in?
+                = link_to '編集  ', edit_post_path(post), class: 'command'
+                = link_to '  削除',
+                 			            	post_path(post),
+                 			            	method: :delete,
+                 			            	class: 'command',
+                 			            	data: { confirm: '本当に削除しますか？'}
+        br
+        hr
+      = paginate @posts
+    .col-sm-4
+      .row
+        .col-sm-12
+          h2.headline
+            | カテゴリー一覧
+          = link_to '和食・日本料理', posts_path(type: "japanese", post: '[desc]'), class:"square_btn"
+          = link_to '寿司・丼', posts_path(type: "sushi", post: '[desc]'), class:"square_btn"
+          = link_to 'イタリアン', posts_path(type: "italian", post: '[desc]'), class:"square_btn"
+          = link_to 'フレンチ', posts_path(type: "french", post: '[desc]'), class:"square_btn"
+          = link_to 'とんかつ', posts_path(type: "tonkatsu", post: '[desc]'), class:"square_btn"
+          = link_to 'カレー', posts_path(type: "administrative", post: '[desc]'), class:"square_btn"
+          = link_to 'アジア・エスニック', posts_path(type: "asia", post: '[desc]'), class:"square_btn"
+          = link_to '焼肉・ステーキ', posts_path(type: "yakiniku", post: '[desc]'), class:"square_btn"
+          = link_to '焼鳥・串料理', posts_path(type: "yakitori", post: '[desc]'), class:"square_btn"
+          = link_to '居酒屋・バー', posts_path(type: "bar", post: '[desc]'), class:"square_btn"
+          = link_to 'カフェ・スイーツ', posts_path(type: "cafe", post: '[desc]'), class:"square_btn"
+          = link_to 'その他', posts_path(type: "other", post: '[desc]'), class:"square_btn"

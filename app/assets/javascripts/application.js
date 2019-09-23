@@ -38,6 +38,19 @@
 //= require plugins/url.min.js
 //= require languages/ja.js
 
-	    $(function() {
-	        $('#post_body').froalaEditor();
-	    });
+$(function() {
+  $('#post_body').froalaEditor();
+});
+
+
+$(function() {
+    $('.navToggle').click(function() {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});

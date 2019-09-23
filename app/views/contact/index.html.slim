@@ -1,0 +1,63 @@
+= form_for(@contact, url: { action: :confirm }) do |f|
+  - if @contact.errors.any?
+    strong 入力内容にエラーがあります
+    ul
+      - @contact.errors.each do |attr, msg|
+        li= msg
+
+  .tops-wrapper
+    h1.headline-first
+      | お問い合わせフォーム
+    br
+    table.company
+      colgroup
+        col width="40%"
+        col width="60%"
+      tr
+        th.arrow_box
+          | 会社名
+          strong.label.label-blue 必須
+          small 株式会ABC
+        td= f.text_field :company
+      tr
+        th.arrow_box
+          | 担当者名
+          strong.label.label-blue 必須
+          small 山田太郎
+        td= f.text_field :name
+      tr
+        th.arrow_box
+          | 電話番号
+          strong.label.label-blue 必須
+          small 00-0000-0000
+        td= f.text_field :tel
+      tr
+        th.arrow_box
+          | メールアドレス
+          strong.label.label-blue 必須
+          small aaa@aaa.com
+        td= f.email_field :email
+      tr
+        th.arrow_box
+          | 住所
+          strong.label.label-blue 必須
+          small 東京都東京市東京町1-1-1
+        td= f.text_field :address
+      tr
+        th.arrow_box
+          | 件名
+          strong.label.label-blue 必須
+        td= f.select(:subject, [ \
+            ["選択する","選択する"],      \
+            ["掲載のご依頼","掲載のご依頼"],      \
+            ["お仕事のご依頼","お仕事のご依頼"],      \
+            ["その他","その他"]      \
+            ])
+      tr
+        th.arrow_box
+          | 本文
+          strong.label.label-blue 必須
+        td= f.text_area :message
+      tr
+        td colspan="2"
+          = f.submit "確認"

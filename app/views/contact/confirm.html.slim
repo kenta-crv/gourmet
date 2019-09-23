@@ -1,0 +1,66 @@
+= form_for(@contact, url: { action: :thanks }) do |f|
+  .tops-wrapper
+    h2.heading
+      | お問い合わせ内容確認フォーム
+    table.company
+      colgroup
+        col width="40%" /
+        col width="60%" /
+      tr
+        th.arrow_box
+          | 会社名
+          strong.label.label-blue 必須
+          br/
+          small 株式会社ABC
+        td
+          = f.hidden_field :company
+          = @contact.company
+      tr
+        th.arrow_box
+          | 担当者名
+          strong.label.label-blue 必須
+          small 山田太郎
+        td
+          = f.hidden_field :name
+          = @contact.name
+      tr
+        th.arrow_box
+          | 電話番号
+          strong.label.label-blue 必須
+          small 00-0000-0000
+        td
+          = f.hidden_field :tel
+          = @contact.tel
+      tr
+        th.arrow_box
+          | メールアドレス
+          strong.label.label-blue 必須
+          small aaa@aaa.com
+        td
+          = f.hidden_field :email
+          = @contact.email
+      tr
+        th.arrow_box
+          | 住所
+          strong.label.label-blue 必須
+          small 東京都東京市東京町1-1-1
+        td
+          = f.hidden_field :address
+          = @contact.address
+      tr
+        th.arrow_box
+          | 住所
+          strong.label.label-blue 必須
+        td
+          = f.hidden_field :subject
+          = @contact.subject
+      tr
+        th.arrow_box
+          | 本文
+          strong.label.label-blue 必須
+        td
+          = f.hidden_field :message
+          = @contact.message
+      tr
+        td colspan="2"
+          = f.submit "確認"
