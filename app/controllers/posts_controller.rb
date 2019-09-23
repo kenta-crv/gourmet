@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-before_action :authenticate_admin!, expent: [:index, :show]
+before_action :authenticate_admin!, except: [:index, :show]
 
   def index
     @type = params[:type]
