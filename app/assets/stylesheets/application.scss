@@ -70,15 +70,19 @@ header {
   background-color: $main_color;
   a {
     padding: 0 50px;
-    padding-top:10px;
     height:45px;
     color: white;
     transition-duration:2.0s;
-    text-shadow: 1px 1px 1px #000;
     }
   a:hover {
-    background-color: #333;
+    background-color: #666;
     }
+}
+
+.menu {
+  height:50px ;
+  line-height:75px;
+  margin-left:0px;
 }
 
 /*ディテール*/
@@ -323,4 +327,54 @@ nav.globalMenuSp.active {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+
+
+.cp_ipselect {
+	overflow: hidden;
+	width: 90%;
+	margin:1.7rem auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl05 {
+	position: relative;
+	border-radius: 2px;
+  border-radius: 50px;
+	background: #666;
+}
+.cp_ipselect.cp_sl05::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #ffffff;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl05 select {
+	padding: 8px 38px 8px 8px;
+	color: #ffffff;
 }

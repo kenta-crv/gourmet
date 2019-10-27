@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
 
   devise_for :admins
+  
+  root to: 'posts#index'
 
   get 'contact' => 'contact#index'
   post 'confirm' =>'contact#confirm'

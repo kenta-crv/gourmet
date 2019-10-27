@@ -15,18 +15,29 @@ html
   .container-field
    header
     .row
-     .col-xs-3
-       = link_to "/" do
-       = image_tag 'rogo.png' , width:'330px'
      .col-xs-6
+       = link_to "/" do
+        = image_tag 'rogo.png' , class: "menu"
+     .col-xs-3.cp_ipselect.cp_sl05
+      select[name="blood"]
+       option[value=""]
+         | 言語を選択
+       option[value="japanese"]
+         | 日本語
+       option[value="korean"]
+         | 韓国語
+       option[value="chinese"]
+         | 中国語
+       option[value="english"]
+         | 英語
      .col-xs-3
       nav.globalMenuSp
        ul
          li
-           = link_to "人気ランキング", "/"
+           = link_to "トップページ", "/"
        ul
          li
-           = link_to "お問い合わせフォーム", "contacts"
+           = link_to "お問い合わせフォーム", "/contact"
 
    .navToggle
           span

@@ -4,7 +4,7 @@ class ContactMailer < ActionMailer::Base
 
   def received_email(contact)
     @contact = contact
-    mail(subject: 'イータリージャパンよりメッセージが届きました') do |format|
+    mail(subject: 'eatery-japanよりメッセージが届きました') do |format|
       format.text
     end
   end
