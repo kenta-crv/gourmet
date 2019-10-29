@@ -14,10 +14,7 @@ html
     = display_meta_tags(default_meta_tags)
   .container-field
    header
-    .row
-     .col-xs-6
-       = link_to "/" do
-        = image_tag 'rogo.png' , class: "menu"
+    .row.center
      .col-xs-3.cp_ipselect.cp_sl05
       select[name="blood"]
        option[value=""]
@@ -30,6 +27,9 @@ html
          | 中国語
        option[value="english"]
          | 英語
+     .col-xs-6
+       = link_to "/" do
+        = image_tag 'rogo.png' , class: "menu center"
      .col-xs-3
       nav.globalMenuSp
        ul

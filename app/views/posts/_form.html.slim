@@ -25,6 +25,36 @@
         th.arrow_box 本文
       tr
         td = text_area :post, :body, class:"post-body"
+
+   table.company
+     tbody
       tr
-        td = f.submit '投稿する'
-		
+        th 店舗名
+        td = text_field :post, :store
+        th 評価
+        td = number_field :post, :evaluation
+      tr
+        th 電話番号
+        td = phone_field :post, :tel
+        th 評価
+        td = number_field :post, :address
+      tr
+        th ジャンル
+        td = text_field :post, :genre
+        th 支払方法
+        td = text_field :post, :payment
+      tr
+        th ランチ単価
+        td = text_field :post, :price_lunch
+        th ディナー単価
+        td = text_field :post, :price_dinner
+      tr
+        th 営業時間
+        td = text_field :post, :hours
+        th 定休日
+        td = text_field :post, :holiday
+      tr
+        th[colspan="2"] 予約方法
+        td[colspan="2"] = text_area :post, :bookking
+      tr
+        td[colspan="4"] = f.submit '投稿する'

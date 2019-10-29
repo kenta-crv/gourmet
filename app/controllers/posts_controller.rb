@@ -77,7 +77,18 @@ before_action :authenticate_admin!, except: [:index, :show]
         :choice,  #カテゴリー
         :keyword, #キーワード
         :description, #説明
-        :body #本文
+        :body, #本文
+        :store, #店舗名
+        :tel, #電話番号
+        :address, #住所
+        :genre, #ジャンル
+        :bookking, #予約
+        :price_lunch, #ランチ単価
+        :price_dinner, #ディナー単価
+        :payment, #支払方法
+        :hours, #営業時間
+        :holiday, #定休日
+        :evaluation, #評価
         )
     end
 
