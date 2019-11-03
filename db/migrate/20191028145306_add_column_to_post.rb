@@ -11,5 +11,6 @@ class AddColumnToPost < ActiveRecord::Migration[5.2]
     add_column :posts, :hours, :string #営業時間
     add_column :posts, :holiday, :string #定休日
     add_column :posts, :evaluation, :string #評価
+    add_column :posts, :csv_file, :string #評価
   end
 end

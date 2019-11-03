@@ -21,6 +21,7 @@
 //= require plugins/code_beautifier.min.js
 //= require plugins/code_view.min.js
 //= require plugins/colors.min.js
+//= require plugins/image.min.js
 //= require plugins/entities.min.js
 //= require plugins/font_family.min.js
 //= require plugins/font_size.min.js

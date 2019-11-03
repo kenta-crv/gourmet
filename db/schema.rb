@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_10_28_145306) do
     t.string "hours"
     t.string "holiday"
     t.string "evaluation"
+    t.string "csv_file"
   end
 
 end

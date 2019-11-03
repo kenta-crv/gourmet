@@ -69,6 +69,11 @@ before_action :authenticate_admin!, except: [:index, :show]
     end
   end
 
+  def import
+    Post.import(params[:csv_file])
+    redirect_to posts_path, notice:"記事を追加しました"
+  end
+
   private
     def post_params
         params.require(:post).permit(
@@ -89,6 +94,7 @@ before_action :authenticate_admin!, except: [:index, :show]
         :hours, #営業時間
         :holiday, #定休日
         :evaluation, #評価
+        :csv_file
         )
     end
 
