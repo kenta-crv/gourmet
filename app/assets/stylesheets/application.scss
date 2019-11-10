@@ -29,7 +29,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  */
-$main_color: #eee;
+$main_color: #fff;
 $sub_color: #fff;
 $asort_color: #d2d2d2;
 
@@ -80,12 +80,13 @@ header {
   a:hover {
     background-color: #666;
     }
-    .menu {
-      padding-top: 10px;
-      max-width: 100%;
-      max-height: 75px;
-      height: auto;
-    }
+}
+
+.menu {
+  padding-top: 10px;
+  max-height: 85px;
+  height: auto;
+  margin-left: -50px;
 }
 
 
@@ -109,7 +110,7 @@ header {
 	.headline {
 		padding: 0.6em 0.6em;/*文字の上下 左右の余白*/
 		color: #494949;/*文字色*/
-		background: main_color;/*背景色*/
+		background: #fff;/*背景色*/
 		border-left: solid 5px #666;/*左線*/
 		border-bottom: solid 3px #d7d7d7;/*下線*/
 		text-align:left;
@@ -274,13 +275,13 @@ nav.globalMenuSp.active {
 .navToggle {
     display: block;
     position: fixed;    /* bodyに対しての絶対位置指定 */
-    right: 40px;
-    top: 12px;
+    right: 30px;
+    top: 20px;
     width: 42px;
     height: 51px;
     cursor: pointer;
     z-index: 3;
-    background: $sub_color;
+    background: orange;
     text-align: center;
 }
 
@@ -335,7 +336,6 @@ nav.globalMenuSp.active {
 
 
 
-
 .cp_ipselect {
 	overflow: hidden;
 	width: 90%;
@@ -363,7 +363,7 @@ nav.globalMenuSp.active {
 	position: relative;
 	border-radius: 2px;
   border-radius: 50px;
-	background: #666;
+	background: orange;
 }
 .cp_ipselect.cp_sl05::before {
 	position: absolute;
