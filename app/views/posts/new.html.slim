@@ -3,16 +3,4 @@
 .tops-wrapper
 br
   h2.headline  新着記事作成
-br
-    == render 'form'
-
-
-table.company
- = form_tag import_posts_path, multipart: true do
-  tr
-    th ファイルインポート
-    td = file_field_tag :csv_file
-    td = submit_tag "インポート"
-
-br
-br
+  == render 'form'

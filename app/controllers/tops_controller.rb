@@ -1,7 +1,13 @@
 class TopsController < ApplicationController
   def index
   end
-  
-  def sample
+
+  def cast
+  end
+
+  def attract
+  end
+
+  def company
   end
 end

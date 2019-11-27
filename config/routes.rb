@@ -4,6 +4,11 @@ Rails.application.routes.draw do
 
   root to: 'posts#index'
 
+  get 'tops' => 'tops#index'
+  get 'business' => 'tops#business'
+  get 'cast' => 'tops#cast'
+  get 'attract' => 'tops#attract'
+
   get 'contact' => 'contact#index'
   post 'confirm' =>'contact#confirm'
   post 'thanks' => 'contact#thanks'
